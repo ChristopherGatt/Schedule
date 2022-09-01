@@ -8,15 +8,21 @@ var currentTime = moment().format("H");
 
 console.log(currentTime);
 
-var rowColourEl = document.getElementById("row");
+const rowColourEl = document.getElementById("row");
 
-if ((rowColourEl = currentTime)) {
-  rowColourEl = "present";
-} else if (rowColourE1 < currentTime) {
-  rowColourEl = "past";
-} else {
-  rowColourEl = "future";
-}
+$(".time-block").each(function () {
+  var currentTime = $(this).attr("id");
+
+  if (currentTime === rowColourEl) {
+    $(this).addClass("present");
+  } else if (currentTime < rowColourE1) {
+    $(this).addClass("past");
+  } else {
+    $(this).addClass("future");
+  }
+});
+
+console.log(rowColourE1);
 
 var text = localStorage.getItem("text");
 
@@ -27,14 +33,12 @@ $(".saveBtn").on("click", function (event) {
   var time = $(this).parent().attr("id");
   var timeHr = $(this).parent().attr("id");
   localStorage.setItem(time, sample);
-  
-  $(‘#1 .description').val(localStorage.getItem('hour-9'));
 
-
-  //if (saveBtn) {
-  // localStorage.setItem//("text", text);
-  // }
+  // $(‘#1 .description').val(localStorage.getItem('hour-9'));
 });
+//if (saveBtn) {
+// localStorage.setItem//("text", text);
+// }
 
 /*const rows = document.getElementsByClassName("col-10");
 let currentHour = parseInt(moment().format('H'));
