@@ -11,11 +11,12 @@ console.log(currentTime);
 document.getElementById("9, 10, 11, 12, 1, 2, 3, 4, 5");
 
 $(".time-block").each(function () {
-  var currentTime = $(this).attr("id");
+  var currentTimeDiv = $(this).attr("id");
 
-  if (currentTime === "id") {
+  console.log("id");
+  if (currentTime === currentTimeDiv) {
     $(this).addClass("present");
-  } else if (currentTime < "id") {
+  } else if (currentTime < currentTimeDiv) {
     $(this).addClass("past");
   } else {
     $(this).addClass("future");
@@ -26,18 +27,18 @@ var text = localStorage.getItem("text");
 
 $(".saveBtn").on("click", function (event) {
   event.preventDefault();
-  var sample = $(this).siblings(".description").val();
+  var textSample = $(this).siblings(".description").val();
   console.log($(this).parent());
   var time = $(this).parent().attr("id");
   var timeHr = $(this).parent().attr("id");
-  localStorage.setItem(time, sample);
+  localStorage.setItem(time, textSample);
 });
 
 $(".saveBtn").on("click", function (event) {
   event.preventDefault();
   h2 = display(false);
 
-  // $(‘#1 .description').val(localStorage.getItem('hour-9'));
+  //$(‘#1 .description').val(localStorage.getItem('hour-9'));
 });
 
 //if (saveBtn) {
