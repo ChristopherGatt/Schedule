@@ -8,21 +8,19 @@ var currentTime = moment().format("H");
 
 console.log(currentTime);
 
-const rowColourEl = document.getElementById("row");
+document.getElementById("9, 10, 11, 12, 1, 2, 3, 4, 5");
 
 $(".time-block").each(function () {
   var currentTime = $(this).attr("id");
 
-  if (currentTime === rowColourEl) {
+  if (currentTime === "id") {
     $(this).addClass("present");
-  } else if (currentTime < rowColourE1) {
+  } else if (currentTime < "id") {
     $(this).addClass("past");
   } else {
     $(this).addClass("future");
   }
 });
-
-console.log(rowColourE1);
 
 var text = localStorage.getItem("text");
 
@@ -33,6 +31,11 @@ $(".saveBtn").on("click", function (event) {
   var time = $(this).parent().attr("id");
   var timeHr = $(this).parent().attr("id");
   localStorage.setItem(time, sample);
+
+ $(".saveBtn").on("click", function (event) {
+    event.preventDefault()
+    ;
+    h2 = display (false)  
 
   // $(‘#1 .description').val(localStorage.getItem('hour-9'));
 });

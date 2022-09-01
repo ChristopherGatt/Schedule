@@ -2,7 +2,7 @@
 
 First we review the starter code
 
-Next we use bootstrap to get curent day displayed
+Next we use moment.js to get curent day displayed
 
 Next we use bootstrap to get a sample row setup
 
