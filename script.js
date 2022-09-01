@@ -31,14 +31,15 @@ $(".saveBtn").on("click", function (event) {
   var time = $(this).parent().attr("id");
   var timeHr = $(this).parent().attr("id");
   localStorage.setItem(time, sample);
+});
 
- $(".saveBtn").on("click", function (event) {
-    event.preventDefault()
-    ;
-    h2 = display (false)  
+$(".saveBtn").on("click", function (event) {
+  event.preventDefault();
+  h2 = display(false);
 
   // $(‘#1 .description').val(localStorage.getItem('hour-9'));
 });
+
 //if (saveBtn) {
 // localStorage.setItem//("text", text);
 // }
