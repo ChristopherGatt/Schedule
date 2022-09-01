@@ -10,26 +10,31 @@ console.log(currentTime);
 
 var rowColourEl = document.getElementById("row");
 
-
-if ((rowColourE1 = currentTime)) {
+if ((rowColourEl = currentTime)) {
   rowColourEl = "present";
 } else if (rowColourE1 < currentTime) {
-  rowColourE1 = "past";
+  rowColourEl = "past";
 } else {
-  rowColourE1 = "future";
+  rowColourEl = "future";
 }
 
 var text = localStorage.getItem("text");
 
+$(".saveBtn").on("click", function (event) {
+  event.preventDefault();
+  var sample = $(this).siblings(".description").val();
+  console.log($(this).parent());
+  var time = $(this).parent().attr("id");
+  var timeHr = $(this).parent().attr("id");
+  localStorage.setItem(time, sample);
+  
+  $(‘#1 .description').val(localStorage.getItem('hour-9'));
 
-"saveBtn".addeventListner("click",function(event) {
-  event.preventDefualt();
-  if (saveBtn) {
-    localStorage.setItem("text", text);
-  } 
-}
 
-
+  //if (saveBtn) {
+  // localStorage.setItem//("text", text);
+  // }
+});
 
 /*const rows = document.getElementsByClassName("col-10");
 let currentHour = parseInt(moment().format('H'));
